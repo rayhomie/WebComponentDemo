@@ -49,7 +49,7 @@
     }
     connectedCallback() {
       var templateElem = this.shadow.getElementById("id-card");
-      // 克隆template的节点（放在多实例污染）
+      // 克隆template的节点（放在多实例污染，必须有这步才能激活模板来使用）
       var content = templateElem.content.cloneNode(true);
       content
         .querySelector(".container>.headpic")

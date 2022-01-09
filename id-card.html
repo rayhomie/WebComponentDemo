@@ -44,10 +44,10 @@
     class IdCard extends HTMLElement {
       constructor() {
         super();
-        console.log(1223);
         // 创建影子dom，并设置为外部不可访问
         var shadow = this.attachShadow({ mode: 'closed' });
         var templateElem = document.getElementById('id-card');
+        // 必须有这步才能激活模板来使用
         var content = templateElem.content.cloneNode(true);
         content.querySelector('.container>.headpic').setAttribute('src', this.getAttribute('headpic'));
         content.querySelector('.container>.number').innerText = this.getAttribute('number');
