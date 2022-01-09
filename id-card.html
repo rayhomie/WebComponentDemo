@@ -3,6 +3,44 @@
     <img class="headpic"></img>
     <div class="number"></div>
   </div>
+  <style>
+    :host {
+      display: flex;
+      align-items: center;
+      width: 450px;
+      height: 180px;
+      background-color: #d4d4d4;
+      border: 1px solid #d5d5d5;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+      box-sizing: border-box;
+      padding: 20px;
+      height: 160px;
+    }
+
+    .container>.headpic {
+      flex: 0 0 auto;
+      width: 160px;
+      height: 160px;
+      vertical-align: middle;
+      border-radius: 5px;
+    }
+
+    .container>.number {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  </style>
 </template>
 
 <script>
