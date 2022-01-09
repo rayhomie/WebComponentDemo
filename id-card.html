@@ -1,3 +1,4 @@
+<!-- html的方式 -->
 <template id="id-card">
   <div class="container">
     <img class="headpic"></img>
@@ -13,32 +14,27 @@
       border: 1px solid #d5d5d5;
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
       border-radius: 3px;
-      overflow: hidden;
       padding: 10px;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     .container {
-      box-sizing: border-box;
+      display: flex;
+      align-items: center;
       padding: 20px;
       height: 160px;
     }
 
     .container>.headpic {
-      flex: 0 0 auto;
       width: 160px;
       height: 160px;
-      vertical-align: middle;
       border-radius: 5px;
     }
 
     .container>.number {
+      margin-left: 20px;
       font-size: 20px;
       font-weight: 600;
       line-height: 1;
-      margin: 0;
-      margin-bottom: 5px;
     }
   </style>
 </template>
@@ -48,6 +44,7 @@
     class IdCard extends HTMLElement {
       constructor() {
         super();
+        console.log(1223);
         // 创建影子dom，并设置为外部不可访问
         var shadow = this.attachShadow({ mode: 'closed' });
         var templateElem = document.getElementById('id-card');
